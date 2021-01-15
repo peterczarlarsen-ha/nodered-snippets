@@ -1,8 +1,13 @@
-#Brug af Deconz ConbeeII , en knap og en tesla model 3
+Brug af Deconz ConbeeII , en knap og en tesla model 3
 
 Formål er at låse charger stik op, og låse bilen op ved tryk på knap, da ladestikket ikke har en knap til at låse op, og appen først skal vække bilen.
 
 Det er min første snippet, så ved ikke helt om det virker, det er til gengæld ret simpelt at gå igennem.
+
+Følgende ting er installeret i HomeAssistant:
+
+Deconz ConBee2 integration
+Tesla integration ("angel")
 
 
 
