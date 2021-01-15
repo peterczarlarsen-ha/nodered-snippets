@@ -1,0 +1,9 @@
+#Brug af Deconz ConbeeII , en knap og en tesla model 3
+
+Formål er at låse charger stik op, og låse bilen op ved tryk på knap, da ladestikket ikke har en knap til at låse op, og appen først skal vække bilen.
+
+Det er min første snippet, så ved ikke helt om det virker, det er til gengæld ret simpelt at gå igennem.
+
+
+
+[{"id":"e31e4c9c.a0967","type":"api-call-service","z":"51227f7d.5bb16","name":"unlock charge door","server":"cc2264d1.e38e98","version":1,"debugenabled":true,"service_domain":"lock","service":"unlock","entityId":"lock.angel_charger_door_lock","data":"","dataType":"json","mergecontext":"","output_location":"","output_location_type":"none","mustacheAltTags":false,"x":535,"y":698,"wires":[["37163d73.094792"]]},{"id":"4e640b09.a28b34","type":"server-events","z":"51227f7d.5bb16","name":"deconz events","server":"cc2264d1.e38e98","event_type":"deconz_event","exposeToHomeAssistant":false,"haConfig":[{"property":"name","value":""},{"property":"icon","value":""}],"waitForRunning":true,"x":85,"y":698,"wires":[["e113d29a.be4338"]]},{"id":"e113d29a.be4338","type":"trigger","z":"51227f7d.5bb16","name":"","op1":"1","op2":"0","op1type":"val","op2type":"val","duration":"250","extend":"false","overrideDelay":"false","units":"ms","reset":"","bytopic":"all","topic":"topic","outputs":1,"x":305,"y":698,"wires":[["e31e4c9c.a0967"]]},{"id":"37163d73.094792","type":"api-call-service","z":"51227f7d.5bb16","name":"unlock car","server":"cc2264d1.e38e98","version":1,"debugenabled":true,"service_domain":"lock","service":"unlock","entityId":"lock.angel_door_lock","data":"","dataType":"json","mergecontext":"","output_location":"","output_location_type":"none","mustacheAltTags":false,"x":795,"y":698,"wires":[[]]},{"id":"cc2264d1.e38e98","type":"server","name":"Home Assistant","addon":true}]
